@@ -18,7 +18,7 @@ const LogoBox = () => {
         <img
           src={
             import.meta.env.VITE_LOGO_SRC ||
-            "https://raw.githubusercontent.com/MatinDehghanian/public-assets/refs/heads/main/icons/uranus.svg"
+            "https://raw.githubusercontent.com/ali-ar1/public-assets/refs/heads/main/icons/uranus.svg"
           }
           alt="Logo"
           style={{ width: "100%", height: "auto" }}

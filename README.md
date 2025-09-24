@@ -2,24 +2,7 @@
 
 ## مراحل نصب
 
-### مرزبان
-
-۱. **قالب رو با دستور زیر دانلود کنید**
-   ```sh
-   sudo wget -N -P /var/lib/marzban/templates/subscription/ https://github.com/ali-ar1/Ourenus/releases/latest/download/index.html
-   ```
-
-   یا مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` با پاک کردن `#` اول آنها از حالت کامنت در بیارید.
-   ```
-   CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
-   SUBSCRIPTION_PAGE_TEMPLATE="subscription/index.html"
-   ```
-
-۳. **ریستارت کردن مرزبان**
-   ```sh
-   marzban restart
-   ```
-
+###
 ### مرزنشین
 
 ۱. **قالب رو با دستور زیر دانلود کنید**

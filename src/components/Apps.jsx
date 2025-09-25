@@ -257,17 +257,26 @@ const renderAppAccordion = (
               t,
               app.downloadLink
             )}
-          {app.configLink &&
-            renderButtonGrid(
+
+          {/* 🔥 تغییر اینجاست */}
+          {app.configLink && (() => {
+            const encoded = encodeURIComponent(subLink);
+            let finalLink = app.configLink
+              .replace("{url}", subLink)
+              .replace("{encodedUrl}", encoded);
+
+            return renderButtonGrid(
               <AddCircleOutlineIcon fontSize="medium" />,
               "configuration",
               theme,
               t,
-              app.configLink.replace("{url}", subLink),
+              finalLink,
               null,
               null,
               app.name === "Shadowrocket" ? subLink : null
-            )}
+            );
+          })()}
+
           {app.tutorialSteps?.length > 0 &&
             renderButtonGrid(
               <PlayCircleFilledWhiteOutlinedIcon fontSize="medium" />,
